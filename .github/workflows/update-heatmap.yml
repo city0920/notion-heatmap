@@ -2,9 +2,12 @@ name: Update Heatmap Daily
 
 on:
   schedule:
-    # 每天 UTC 时间 00:00 运行（北京时间 08:00）
     - cron: '0 0 * * *'
   workflow_dispatch:
+
+# 👇👇👇 新增这一行 👇👇👇
+permissions:
+  contents: write
 
 jobs:
   build:
